@@ -1,0 +1,15 @@
+<div  ng-class="vm.hidePanel?'feedbackOnpeBar animate bounceOutRight low':'feedbackOnpeBar animate bounceInRight low'">
+	<i class="fa fa-chevron-right feedbackOnpearrow" aria-hidden="true" ng-click="vm.close()"></i>{{vm.textPanel}}
+	<img class="feedbackOnpeimg" ng-class="{feedbackOnpeimg: vm.status == 0, feedbackOnpeimg1: vm.status == 1, feedbackOnpeimg2: vm.status == 2}" ng-src="js/libs/feedback-onpe/img/logo.png"></img>      
+	<div class="feedbackOnpekeyboard" ng-show="vm.status == 0">
+		<div class="feedbackOnpekey" ng-click="vm.vote(1)"><i class="fa fa-thumbs-o-up feedbackOnpelike" aria-hidden="true"></i></div>
+		<div class="feedbackOnpekey" ng-click="vm.vote(0)"><i class="fa fa-thumbs-o-down feedbackOnpeunlike"  aria-hidden="true"></i></div>
+	</div>
+	<div class="feedbackOnpecomment" ng-show="vm.status == 1">
+		<textarea ng-keypress="KeyDown($event)" placeholder="{{vm.prompt}}" ng-model="vm.comment" ng-trim="false" maxlength="100"></textarea><i ng-click="vm.submit()" class="fa fa-paper-plane" aria-hidden="true"></i>
+		<span>{{vm.comment==null?0:vm.comment.length}}/100</span>
+	</div> 
+	<div class="feedbackOnpecomment" ng-show="vm.status == 2">
+		<h4>{{vm.textEnd}}</h4>
+	</div>
+</div>
