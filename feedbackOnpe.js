@@ -8,7 +8,7 @@
 	    .directive('tooltipPanelOnpe', tooltipPanelOnpe)
 	    .factory('feedbackPanelService', feedbackPanelService)
 	    .constant('ConstMessages', {
-	    	REST_SERVICE_URI: 'http://172.16.89.216:8080/SRS/feedbackonpe/',
+	    	REST_SERVICE_URI: 'http://',
 	    	QUESTION_OPINION: '¿Como calificaria su experiencia en appname?',
 	    	THANKS_FOR_JOIN: '¡Gracias por participar!',
 	    	ASK_COMMENTS: 'Si desea, ingrese sus comentarios...',
